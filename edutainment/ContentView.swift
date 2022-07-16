@@ -64,6 +64,7 @@ struct ContentView: View {
                 Button("Submit") {
                     submitAnswer()
                 }
+                .disabled(!showGame)
                 Text("Score: \(score)")
             }.navigationTitle("Settings")
         }.alert("You Finished!", isPresented: $showAlert) {
